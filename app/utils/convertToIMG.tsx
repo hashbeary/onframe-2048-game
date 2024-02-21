@@ -3,7 +3,7 @@ import { join } from "path";
 import satori from "satori";
 import sharp from "sharp";
 
-export async function convertToIMG(tiles: Array<[number]>): Promise<string> {
+export async function convertToIMG(tiles: Array<number[]>): Promise<string> {
 	const font = fs.readFileSync(
 		join(process.cwd(), "public/fonts/ProtestStrike-Regular.ttf")
 	);

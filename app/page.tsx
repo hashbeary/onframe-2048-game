@@ -2,13 +2,6 @@ import { getFrameMetadata } from "@coinbase/onchainkit";
 import type { Metadata } from "next";
 import { NEXT_PUBLIC_URL } from "./config";
 
-const field = [
-	[4, 4, 4, 4],
-	[4, 4, 4, 4],
-	[4, 4, 4, 4],
-	[4, 4, 4, 4],
-];
-
 const frameMetadata = getFrameMetadata({
 	buttons: [
 		{
@@ -25,22 +18,19 @@ const frameMetadata = getFrameMetadata({
 		},
 	],
 	image: {
-		src: `${NEXT_PUBLIC_URL}/init.jpg`,
+		src: `${NEXT_PUBLIC_URL}/init.png`,
 		aspectRatio: "1:1",
 	},
-	input: {
-		text: "Optional third party link...",
-	},
-	post_url: `${NEXT_PUBLIC_URL}/api/generator`,
+	post_url: `${NEXT_PUBLIC_URL}/api/move`,
 });
 
 export const metadata: Metadata = {
-	title: "Onframe QR Code Generator",
-	description: "Onframe QR Code Generator",
+	title: "Onframe 2048 Game",
+	description: "Onframe 2048 Game",
 	openGraph: {
-		title: "Onframe QR Code Generator",
-		description: "Onframe QR Code Generator",
-		images: [`${NEXT_PUBLIC_URL}/init.jpg`],
+		title: "Onframe 2048 Game",
+		description: "Onframe 2048 Game",
+		images: [`${NEXT_PUBLIC_URL}/init.png`],
 	},
 	other: {
 		...frameMetadata,
@@ -50,7 +40,7 @@ export const metadata: Metadata = {
 export default function Page() {
 	return (
 		<>
-			<h1>Onframe QR Code Generator</h1>
+			<h1>Onframe 2048 Game</h1>
 		</>
 	);
 }
