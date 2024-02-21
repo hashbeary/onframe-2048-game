@@ -18,7 +18,7 @@ const frameMetadata = getFrameMetadata({
 		},
 	],
 	image: {
-		src: `${NEXT_PUBLIC_URL}/init.png`,
+		src: `${NEXT_PUBLIC_URL}/public/img/init.png`,
 		aspectRatio: "1:1",
 	},
 	post_url: `${NEXT_PUBLIC_URL}/api/move`,
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: "Onframe 2048 Game",
 		description: "Onframe 2048 Game",
-		images: [`${NEXT_PUBLIC_URL}/init.png`],
+		images: [`${NEXT_PUBLIC_URL}/public/img/init.png`],
 	},
 	other: {
 		...frameMetadata,

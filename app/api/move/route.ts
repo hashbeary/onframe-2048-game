@@ -7,6 +7,7 @@ import {
 import { NextRequest, NextResponse } from "next/server";
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
+	// Try to use JWT Token
 	const body: FrameRequest = await req.json();
 
 	const { message } = await getFrameMessage(body, {
